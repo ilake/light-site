@@ -12,14 +12,21 @@ jQuery(document).ready(function($) {
       if (destination.anchor == "s2") {
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else if (destination.anchor == "s4") {
+        $("#s4-2 .section-left").fadeOut();
+
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else if (destination.anchor == "s9") {
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else if (destination.anchor == "s10") {
+        $("#s10-2 .section-left").fadeOut();
+        $("#s10-3 .section-left").fadeOut();
+
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else if (destination.anchor == "s14") {
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else if (destination.anchor == "s16") {
+        $("#s16-2 img").fadeOut();
+
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else {
         $('#fullpage').fullpage.setScrollingSpeed(800);
@@ -61,7 +68,19 @@ jQuery(document).ready(function($) {
       } else {
         $('#fullpage').fullpage.setScrollingSpeed(800);
       }
-    }
+    },
+    afterSlideLoad: function(section, origin, destination, direction) {
+      if (section.anchor == "s4" || section.anchor == "s10") {
+        $("#" + origin.item.id + " .section-left").fadeOut();
+        $("#" + destination.item.id + " .section-left").fadeIn({duration: 1000});
+      }
+      else if (section.anchor == "s16") {
+        if (origin.item.id !== destination.item.id) {
+          $("#" + origin.item.id + " img").fadeOut();
+          $("#" + destination.item.id + " img").fadeIn({duration: 1000});
+        }
+      }
+    },
   });
 
   /**
