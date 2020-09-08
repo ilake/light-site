@@ -94,7 +94,10 @@ jQuery(document).ready(function($) {
   **/
   $('.popupBotton a').click(function(event) {
     event.preventDefault();
+    const anchor = fullpage_api.getActiveSection().anchor.slice(1);
+    const index = fullpage_api.getActiveSlide() ? fullpage_api.getActiveSlide().index + 1 : 1;
 
+    $("#product-modal img").attr("src", "image/pop" + anchor + "-" + index + ".jpg");
     $("#product-modal").modal({
       fadeDuration: 500,
       showClose: false
