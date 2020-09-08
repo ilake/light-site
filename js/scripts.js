@@ -103,8 +103,8 @@ jQuery(document).ready(function($) {
   $("#product-modal input.submit").click(function (event) {
     event.preventDefault();
 
-    let customerName= $("#customer-name").val();
-    let customerEmail = $("#customer-email").val();
+    const customerName= $("#customer-name").val();
+    const customerEmail = $("#customer-email").val();
     let emailContent = $("#email-content").val();
     var isValid = true;
 
@@ -113,9 +113,35 @@ jQuery(document).ready(function($) {
     }
 
     if (isValid) {
-      console.log(customerName)
-      console.log(customerEmail)
-      console.log(emailContent + '產品頁來源:'+ fullpage_api.getActiveSection().anchor + (fullpage_api.getActiveSlide() ? '&' + fullpage_api.getActiveSlide().index : ""))
+      console.log()
+
+      Email.send({
+        Host : "smtp.gmail.com",
+        Username : "email",
+        Password : "password",
+        To : customerEmail,
+        From : "email",
+        Subject : "This is the subject",
+        Body : emailContent + '產品頁來源:'+ fullpage_api.getActiveSection().anchor + (fullpage_api.getActiveSlide() ? '&' + fullpage_api.getActiveSlide().index : "")
+      }).then(
+        message => alert("Sent")
+      );
     }
+  });
+
+  $("#newletter input.submit").click(function (event) {
+    const newsletterEmail = $("#newsletter-email").val();
+
+    Email.send({
+      Host : "smtp.gmail.com",
+      Username : "email",
+      Password : "password",
+      To : newsletterEmail,
+      From : "email",
+      Subject : "This is the subject",
+      Body : "Fill body" 
+    }).then(
+      message => alert("Sent")
+    );
   });
 });

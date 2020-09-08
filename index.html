@@ -10,6 +10,7 @@
     <script type="text/javascript" src="js/fullpage.scrollHorizontally.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, minimum-scale=1.0, maximum-scale=1.0,user-scalable=yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -289,8 +290,8 @@
         <section class="section section19" data-anchor="s19">
           <img class="s19-logo" id="s19-1" src="image/seeddesign_logo_black.svg" width="200px">
           <div id="s19-2">
-            <form>
-              <input type="text" name="email" value="訂閱電子報">
+            <form id="newsletter">
+              <input type="text" name="email" placeholder="訂閱電子報" id="newsletter-email">
               <input type="submit" value="訂閱">
             </form>
           </div>
