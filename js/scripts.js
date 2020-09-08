@@ -63,6 +63,7 @@ jQuery(document).ready(function($) {
       }
     }
   });
+
   /**
         Sound button
    **/
@@ -84,6 +85,9 @@ jQuery(document).ready(function($) {
     return false;
   });
 
+  /**
+     Product modal button
+  **/
   $('.popupBotton a').click(function(event) {
     event.preventDefault();
 
@@ -91,5 +95,27 @@ jQuery(document).ready(function($) {
       fadeDuration: 500,
       showClose: false
     });
+  });
+
+  /**
+     Customer request info submit button
+  **/
+  $("#product-modal input.submit").click(function (event) {
+    event.preventDefault();
+
+    let customerName= $("#customer-name").val();
+    let customerEmail = $("#customer-email").val();
+    let emailContent = $("#email-content").val();
+    var isValid = true;
+
+    if (customerName == "" || customerEmail == "" || emailContent == "") {
+      isValid = false;
+    }
+
+    if (isValid) {
+      console.log(customerName)
+      console.log(customerEmail)
+      console.log(emailContent + '產品頁來源:'+ fullpage_api.getActiveSection().anchor + (fullpage_api.getActiveSlide() ? '&' + fullpage_api.getActiveSlide().index : ""))
+    }
   });
 });
