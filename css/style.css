@@ -1,632 +1,632 @@
 /*產品詢問跳出視窗*/
 
 .popupBotton {
-    color: #fff;
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-    font-weight: 700;
-    z-index: 999;
-    font-size: 35px;
+  color: #fff;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  font-weight: 700;
+  z-index: 999;
+  font-size: 35px;
 }
 
 .popupBotton a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .section .form {
-    position: absolute;
-    width: 970px;
-    z-index: 999;
-    margin: 0 auto;
-    background: #c8c9cd;
-    transform: translateY(-50%);
-    position: relative;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  width: 970px;
+  z-index: 999;
+  margin: 0 auto;
+  background: #c8c9cd;
+  transform: translateY(-50%);
+  position: relative;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .section .form h3 {
-    text-align: left;
-    font-family: sans-serif;
-    padding: 0 50px;
-    margin: 0;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+  text-align: left;
+  font-family: sans-serif;
+  padding: 0 50px;
+  margin: 0;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .section .form label {
-    font-family: sans-serif;
-    font-size: 18px;
-    letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .section .form form {
-    text-align: left;
-    padding: 0 50px;
+  text-align: left;
+  padding: 0 50px;
 }
 
 .section .form input[type="text"] {
-    width: 36.32%;
-    background: #d9d9db;
-    border: 0px;
-    padding: 5px;
-    margin-bottom: 20px;
+  width: 36.32%;
+  background: #d9d9db;
+  border: 0px;
+  padding: 5px;
+  margin-bottom: 20px;
 }
 
 .section .form textarea {
-    width: 100%;
-    background: #d9d9db;
-    border: 0px;
-    margin-top: 8px;
+  width: 100%;
+  background: #d9d9db;
+  border: 0px;
+  margin-top: 8px;
 }
 
 .section .form input[type="submit"] {
-    background: #8c8c8e;
-    border: 0px;
-    color: #fff;
-    font-size: 18px;
-    padding: 2px 20px;
-    margin: 20px 0 20px 0;
+  background: #8c8c8e;
+  border: 0px;
+  color: #fff;
+  font-size: 18px;
+  padding: 2px 20px;
+  margin: 20px 0 20px 0;
 }
 
 #form-s4-1 {
-    opacity: 0;
-    background-color: #00000091;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 999;
-    pointer-events: none;
+  opacity: 0;
+  background-color: #00000091;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
 }
 
 #form-s4-1.show {
-    opacity: 1;
-    transition: all 0.7s ease-out;
-    transition-delay: .1s;
+  opacity: 1;
+  transition: all 0.7s ease-out;
+  transition-delay: .1s;
 }
 
 .section .form img {
-    max-width: 970px;
-    height: auto;
-    object-fit: none;
+  max-width: 970px;
+  height: auto;
+  object-fit: none;
 }
 
 
 /*音樂按鈕*/
 
 .musicicon {
-    position: absolute;
-    z-index: 1;
-    top: 20px;
-    right: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  right: 20px;
 }
 
 img.soundicon {
-    width: 30px!important;
-    height: auto!important;
+  width: 30px!important;
+  height: auto!important;
 }
 
 .musicicon .sound {
-    display: flex
+  display: flex
 }
 
 .musicicon .sound .audio {
-    max-width: 30px;
-    max-height: 30px;
-    cursor: pointer
+  max-width: 30px;
+  max-height: 30px;
+  cursor: pointer
 }
 
 .musicicon .sound .audio .sound1 {
-    transition: fill-opacity 800ms;
-    fill-opacity: 0
+  transition: fill-opacity 800ms;
+  fill-opacity: 0
 }
 
 .musicicon .sound .audio .sound2 {
-    transition: fill-opacity 400ms;
-    fill-opacity: 0
+  transition: fill-opacity 400ms;
+  fill-opacity: 0
 }
 
 .musicicon .sound .audio.play .sound1 {
-    transition: fill-opacity 400ms;
-    fill-opacity: 1
+  transition: fill-opacity 400ms;
+  fill-opacity: 1
 }
 
 .musicicon .sound .audio.play .sound2 {
-    transition: fill-opacity 800ms;
-    fill-opacity: 1
+  transition: fill-opacity 800ms;
+  fill-opacity: 1
 }
 
 
 /*選單*/
 
 #menu {
-    position: fixed;
-    top: 60px;
-    left: 0;
-    height: 40px;
-    z-index: 70;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 #menu li {
-    float: left;
-    list-style-type: none;
-    margin: 0px 5px;
-    background-color: #7b7b7b;
-    padding: 10px 10px;
-    border-radius: 10px;
-    font-size: 13px;
-    font-family: sans-serif;
-    margin-bottom: 15px;
+  float: left;
+  list-style-type: none;
+  margin: 0px 5px;
+  background-color: #7b7b7b;
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin-bottom: 15px;
 }
 
 #menu li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 
 /*基本元素*/
 
 p {
-    font-size: 18px;
-    font-family: sans-serif;
-    line-height: 44px;
+  font-size: 18px;
+  font-family: sans-serif;
+  line-height: 44px;
 }
 
 .section {
-    text-align: center;
-    color: #fff;
-    background-color: #000;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
 }
 
 .section-left {
-    top: 0;
-    width: 50%;
-    height: 100vh;
-    float: left;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  float: left;
 }
 
 .section-left img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .section-right {
-    top: 0;
-    width: 50%;
-    height: 100vh;
-    float: right;
-    display: flex;
-    align-items: center;
-    position: relative;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  float: right;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .section-right p {
-    padding: 120px;
-    text-align: left;
+  padding: 120px;
+  text-align: left;
 }
 
 .section img {
-    object-fit: cover;
-    object-position: center bottom;
-    height: 100vh;
-    width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  height: 100vh;
+  width: 100%;
 }
 
 .slide img {
-    object-position: left center;
-    width: 100%;
+  object-position: left center;
+  width: 100%;
 }
 
 .product-name {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .product-slogan {
-    font-size: 18px;
-    margin-bottom: 30px;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .product-designer {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 
 /*section1*/
 
 .section1 {
-    background-color: #000;
-    position: relative;
+  background-color: #000;
+  position: relative;
 }
 
 .section1-left {
-    width: 45%;
-    float: left;
-    text-align: right;
-    position: relative;
+  width: 45%;
+  float: left;
+  text-align: right;
+  position: relative;
 }
 
 .section1-right {
-    width: 55%;
-    float: right;
-    text-align: left;
+  width: 55%;
+  float: right;
+  text-align: left;
 }
 
 .section1-right p {
-    font-size: 30px;
-    font-family: sans-serif;
-    line-height: 0px;
-    padding: 0px 0px 0px 20px;
+  font-size: 30px;
+  font-family: sans-serif;
+  line-height: 0px;
+  padding: 0px 0px 0px 20px;
 }
 
 img.s1-logo {
-    width: 231px;
-    height: auto;
-    padding: 8px 20px 0px 0px;
+  width: 231px;
+  height: auto;
+  padding: 8px 20px 0px 0px;
 }
 
 #s1-1-1 {
-    top: 350px;
-    opacity: 0;
+  top: 350px;
+  opacity: 0;
 }
 
 #s1-1-1.active {
-    top: 300px;
-    opacity: 1;
-    transition: all 0.7s ease-out;
-    transition-delay: .1s;
+  top: 300px;
+  opacity: 1;
+  transition: all 0.7s ease-out;
+  transition-delay: .1s;
 }
 
 #s1-1-2 {
-    top: 550px;
-    opacity: 0;
+  top: 550px;
+  opacity: 0;
 }
 
 #s1-1-2.active {
-    top: 500px;
-    opacity: 1;
-    transition: all 0.7s ease-out;
-    transition-delay: .8s;
+  top: 500px;
+  opacity: 1;
+  transition: all 0.7s ease-out;
+  transition-delay: .8s;
 }
 
 
 /*section1-2*/
 
 .section1-2 {
-    background-color: #000;
+  background-color: #000;
 }
 
 .section1-2 p {
-    font-size: 24px;
-    font-family: sans-serif;
-    line-height: 40px;
-    text-align: justify;
-    padding: 0 22%;
+  font-size: 24px;
+  font-family: sans-serif;
+  line-height: 40px;
+  text-align: justify;
+  padding: 0 22%;
 }
 
 #s1-2 {
-    position: relative;
+  position: relative;
 }
 
 #s1-2-1 {
-    position: absolute;
-    top: 350px;
-    opacity: 0;
+  position: absolute;
+  top: 350px;
+  opacity: 0;
 }
 
 #s1-2-1.active {
-    top: 300px;
-    opacity: 1;
-    transition: all 0.7s ease-out;
-    transition-delay: .1s;
+  top: 300px;
+  opacity: 1;
+  transition: all 0.7s ease-out;
+  transition-delay: .1s;
 }
 
 #s1-2-2 {
-    position: absolute;
-    top: 550px;
-    opacity: 0;
+  position: absolute;
+  top: 550px;
+  opacity: 0;
 }
 
 #s1-2-2.active {
-    top: 450px;
-    opacity: 1;
-    transition: all 0.7s ease-out;
-    transition-delay: .8s;
+  top: 450px;
+  opacity: 1;
+  transition: all 0.7s ease-out;
+  transition-delay: .8s;
 }
 
 
 /*section4*/
 
 .sol-product-info {
-    font-family: sans-serif;
-    position: absolute;
-    width: 400px;
-    height: 136px;
-    right: 0;
-    bottom: 54px;
-    left: 0;
-    margin: auto;
+  font-family: sans-serif;
+  position: absolute;
+  width: 400px;
+  height: 136px;
+  right: 0;
+  bottom: 54px;
+  left: 0;
+  margin: auto;
 }
 
 #s4-1-1 {
-    opacity: 1;
+  opacity: 1;
 }
 
 #s4-1-1.active {
-    opacity: 1;
-    transition: all 0.7s ease-out;
-    transition-delay: .3s;
+  opacity: 1;
+  transition: all 0.7s ease-out;
+  transition-delay: .3s;
 }
 
 #s4-2-1 {
-    opacity: 1;
+  opacity: 1;
 }
 
 #s4-2-1.active {
-    opacity: 1;
-    transition: all 0.7s ease-out;
-    transition-delay: .3s;
+  opacity: 1;
+  transition: all 0.7s ease-out;
+  transition-delay: .3s;
 }
 
 
 /*section5*/
 
 #solVideo {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100%;
-    background-color: black;
-    background-position: center center;
-    background-size: contain;
-    object-fit: cover;
-    z-index: 3;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black;
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover;
+  z-index: 3;
 }
 
 
 /*section6*/
 
 .olo-product-info {
-    text-align: left;
-    font-family: sans-serif;
-    position: absolute;
-    height: 122px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 80px;
-    margin: auto;
+  text-align: left;
+  font-family: sans-serif;
+  position: absolute;
+  height: 122px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 80px;
+  margin: auto;
 }
 
 
 /*section8*/
 
 .sircle-product-info {
-    font-family: sans-serif;
-    position: absolute;
-    width: 400px;
-    height: 136px;
-    bottom: 54px;
-    right: 80px;
-    margin: auto;
-    text-align: right;
+  font-family: sans-serif;
+  position: absolute;
+  width: 400px;
+  height: 136px;
+  bottom: 54px;
+  right: 80px;
+  margin: auto;
+  text-align: right;
 }
 
 
 /*section11*/
 
 .apollo-product-info {
-    text-align: left;
-    font-family: sans-serif;
-    position: absolute;
-    height: 122px;
-    right: 0;
-    bottom: 100px;
-    left: 80px;
-    margin: auto;
-    z-index: 999;
+  text-align: left;
+  font-family: sans-serif;
+  position: absolute;
+  height: 122px;
+  right: 0;
+  bottom: 100px;
+  left: 80px;
+  margin: auto;
+  z-index: 999;
 }
 
 #apolloVideo {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100%;
-    background-color: black;
-    background-position: center center;
-    background-size: contain;
-    object-fit: cover;
-    z-index: 3;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black;
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover;
+  z-index: 3;
 }
 
 
 /*section13*/
 
 .dawn-product-info {
-    text-align: left;
-    font-family: sans-serif;
-    bottom: 150px;
-    margin: auto;
-    left: 80px;
-    position: absolute;
+  text-align: left;
+  font-family: sans-serif;
+  bottom: 150px;
+  margin: auto;
+  left: 80px;
+  position: absolute;
 }
 
 
 /*section17*/
 
 .section17 {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .section17 p {
-    font-size: 24px;
-    font-family: sans-serif;
-    line-height: 40px;
-    text-align: justify;
-    padding: 0 30%;
+  font-size: 24px;
+  font-family: sans-serif;
+  line-height: 40px;
+  text-align: justify;
+  padding: 0 30%;
 }
 
 #s17-1 {
-    position: absolute;
-    top: 350px;
-    opacity: 0;
+  position: absolute;
+  top: 350px;
+  opacity: 0;
 }
 
 #s17-1.active {
-    top: 300px;
-    opacity: 1;
-    transition: all 0.7s ease-out;
-    transition-delay: .1s;
+  top: 300px;
+  opacity: 1;
+  transition: all 0.7s ease-out;
+  transition-delay: .1s;
 }
 
 #s17-2 {
-    position: absolute;
-    top: 550px;
-    opacity: 0;
+  position: absolute;
+  top: 550px;
+  opacity: 0;
 }
 
 #s17-2.active {
-    top: 400px;
-    opacity: 1;
-    transition: all 0.7s ease-out;
-    transition-delay: .8s;
+  top: 400px;
+  opacity: 1;
+  transition: all 0.7s ease-out;
+  transition-delay: .8s;
 }
 
 
 /*section18*/
 
 .section18 {
-    background-color: #000;
+  background-color: #000;
 }
 
 .section18.active {
-    background-color: #d2d2d2;
-    transition: all 2s ease-out;
-    transition-delay: 1s;
+  background-color: #d2d2d2;
+  transition: all 2s ease-out;
+  transition-delay: 1s;
 }
 
 .section18 .slide18-1 {
-    align-items: center;
+  align-items: center;
 }
 
 #s18-1 {
-    font-size: 50px;
-    color: #fff;
-    opacity: 0;
+  font-size: 50px;
+  color: #fff;
+  opacity: 0;
 }
 
 #s18-1.active {
-    font-size: 50px;
-    opacity: 1;
-    color: #fff;
-    transition: all 1s ease-out;
-    transition-delay: 2.5s;
+  font-size: 50px;
+  opacity: 1;
+  color: #fff;
+  transition: all 1s ease-out;
+  transition-delay: 2.5s;
 }
 
 
 /*section19*/
 
 .section19 {
-    background-color: #d2d2d2;
+  background-color: #d2d2d2;
 }
 
 img.s19-logo {
-    width: 231px;
-    height: auto;
-    position: absolute;
-    top: 200px;
-    left: 0;
-    right: 0;
-    margin: auto;
+  width: 231px;
+  height: auto;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .web-info {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    right: 0;
-    margin: auto;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .web-info p {
-    font-size: 17px;
-    font-family: sans-serif;
-    line-height: 30px;
-    color: #b1b1b1;
-    margin-bottom: 40px;
+  font-size: 17px;
+  font-family: sans-serif;
+  line-height: 30px;
+  color: #b1b1b1;
+  margin-bottom: 40px;
 }
 
 .web-link a {
-    color: #000;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 18px;
-    letter-spacing: 1px;
+  color: #000;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 #s19-1 {
-    opacity: 0;
-    top: 300px;
+  opacity: 0;
+  top: 300px;
 }
 
 #s19-1.active {
-    opacity: 1;
-    transition: all 1s ease-out;
-    transition-delay: .5s;
-    top: 180px;
+  opacity: 1;
+  transition: all 1s ease-out;
+  transition-delay: .5s;
+  top: 180px;
 }
 
 #s19-2 {
-    position: absolute;
-    opacity: 0;
-    top: 400px;
-    right: 0;
-    left: 0;
+  position: absolute;
+  opacity: 0;
+  top: 400px;
+  right: 0;
+  left: 0;
 }
 
 #s19-2 input[type="text"] {
-    padding: 8px;
-    font-size: 15px;
-    border: 0px;
-    width: 280px;
-    color: #999;
+  padding: 8px;
+  font-size: 15px;
+  border: 0px;
+  width: 280px;
+  color: #999;
 }
 
 #s19-2 input[type="submit"] {
-    padding: 9px;
-    border: 0px;
-    width: 80px;
-    background-color: #999;
-    color: #fff;
+  padding: 9px;
+  border: 0px;
+  width: 80px;
+  background-color: #999;
+  color: #fff;
 }
 
 #s19-2.active {
-    opacity: 1;
-    transition: all 1s ease-out;
-    transition-delay: 1.5s;
-    top: 290px;
+  opacity: 1;
+  transition: all 1s ease-out;
+  transition-delay: 1.5s;
+  top: 290px;
 }
 
 #s19-3 {
-    opacity: 0;
+  opacity: 0;
 }
 
 #s19-3.active {
-    opacity: 1;
-    transition: all 1s ease-out;
-    transition-delay: 2.5s;
+  opacity: 1;
+  transition: all 1s ease-out;
+  transition-delay: 2.5s;
 }
