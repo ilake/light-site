@@ -74,9 +74,13 @@ jQuery(document).ready(function($) {
 
     if (song.paused) {
       $("a.sound .audio").addClass("play");
+      $(".sound-play").show();
+      $(".sound-stop").hide();
       song.play();
       $('audio').animate({ volume: 1 }, 500);
     } else {
+      $(".sound-play").hide();
+      $(".sound-stop").show();
       $("a.sound .audio").removeClass("play");
       $('audio').animate({ volume: 0 }, 500, function() {
         song.pause();

@@ -108,6 +108,10 @@ img.soundicon {
   display: flex
 }
 
+.sound-play {
+  display: none;
+}
+
 .musicicon .sound .audio {
   max-width: 30px;
   max-height: 30px;
