@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-
   $('#fullpage').fullpage({
     licenseKey: '3C8C1C74-DC98479A-8BD95AE2-E3570D1F',
     scrollingSpeed: 800,
@@ -85,8 +84,12 @@ jQuery(document).ready(function($) {
     return false;
   });
 
-  $("#pops4-1 a").click(function(event) {
-    $("#form-s4-1").addClass("show").show();
-    return false;
+  $('.popupBotton a').click(function(event) {
+    event.preventDefault();
+
+    $("#product-modal").modal({
+      fadeDuration: 500,
+      showClose: false
+    });
   });
 });
