@@ -55,6 +55,7 @@ jQuery(document).ready(function($) {
     },
     // 離開section後減速
     onLeave: function(origin, destination, direction) {
+      $.modal.close();
       var leavingSection = this;
 
       if (destination.anchor == "s2") {
