@@ -149,8 +149,10 @@ jQuery(document).ready(function($) {
         From : "email",
         Subject : "This is the subject",
         Body : emailContent + '產品頁來源:'+ fullpage_api.getActiveSection().anchor + (fullpage_api.getActiveSlide() ? '&' + fullpage_api.getActiveSlide().index : "")
-      }).then(
-        message => alert("Sent")
+      }).then((message) => {
+        alert("Sent");
+        $.modal.close();
+      }
       );
     }
   });
