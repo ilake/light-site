@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
     scrollingSpeed: 800,
     controlArrows: false,
     scrollHorizontally: true,
+    keyboardScrolling: false,
     scrollHorizontallyKey: 'INSERT YOUR EXTENSION KEY HERE', //see https://goo.gl/xkUmHS
     // 進入section後加速
     afterLoad: function(origin, destination, direction) {
@@ -12,20 +13,26 @@ jQuery(document).ready(function($) {
       if (destination.anchor == "s2") {
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else if (destination.anchor == "s4") {
-        $("#s4-2 .section-left").fadeOut();
+        if (!fullpage_api.getActiveSlide().isLast) {
+          $("#s4-2 .section-left").fadeOut();
+        }
 
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else if (destination.anchor == "s9") {
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else if (destination.anchor == "s10") {
-        $("#s10-2 .section-left").fadeOut();
-        $("#s10-3 .section-left").fadeOut();
+        if (!fullpage_api.getActiveSlide().isLast) {
+          $("#s10-2 .section-left").fadeOut();
+          $("#s10-3 .section-left").fadeOut();
+        }
 
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else if (destination.anchor == "s14") {
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else if (destination.anchor == "s16") {
-        $("#s16-2 img").fadeOut();
+        if (!fullpage_api.getActiveSlide().isLast) {
+          $("#s16-2 img").fadeOut();
+        }
 
         $('#fullpage').fullpage.setScrollingSpeed(0);
       } else {
@@ -82,6 +89,47 @@ jQuery(document).ready(function($) {
         }
       }
     },
+  });
+
+  $(document).keydown(function (e) {
+    var shiftPressed = e.shiftKey;
+    const currentSlide = fullpage_api.getActiveSlide();
+
+    switch (e.which) {
+        //up
+      case 38:
+      case 33:
+        if (currentSlide) {
+          if (currentSlide.isFirst) {
+            fullpage_api.moveSectionUp()
+          }
+          else {
+            fullpage_api.moveSlideLeft();
+          }
+        }
+        else {
+          fullpage_api.moveSectionUp()
+        }
+
+        break;
+
+        //down
+      case 40:
+      case 34:
+        if (currentSlide) {
+          if (currentSlide.isLast) {
+            fullpage_api.moveSectionDown()
+          }
+          else {
+            fullpage_api.moveSlideRight();
+          }
+        }
+        else {
+          fullpage_api.moveSectionDown()
+        }
+        break;
+
+    }
   });
 
   /**
