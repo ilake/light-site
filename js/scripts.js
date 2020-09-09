@@ -155,7 +155,9 @@ jQuery(document).ready(function($) {
     }
   });
 
-  $("#newletter input.submit").click(function (event) {
+  $("#newsletter input.submit").click(function (event) {
+    event.preventDefault();
+
     const newsletterEmail = $("#newsletter-email").val();
 
     Email.send({
