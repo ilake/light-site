@@ -13,6 +13,7 @@
 .popupBotton a {
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 #product-modal {
