@@ -182,12 +182,15 @@ jQuery(document).ready(function($) {
     const customerEmail = $("#customer-email").val();
     let emailContent = $("#email-content").val();
     var isValid = true;
+    var isEmailValid = false;
 
     if (customerName == "" || customerEmail == "" || emailContent == "") {
       isValid = false;
     }
 
-    if (isValid) {
+    isEmailValid = validateEmail(customerEmail);
+
+    if (isValid && isEmailValid) {
       console.log()
 
       Email.send({
@@ -204,6 +207,9 @@ jQuery(document).ready(function($) {
       }
       );
     }
+    else if (!isEmailValid) {
+      alert("Your email is invalid")
+    }
   });
 
   $("#newsletter input.submit").click(function (event) {
@@ -211,16 +217,27 @@ jQuery(document).ready(function($) {
 
     const newsletterEmail = $("#newsletter-email").val();
 
-    Email.send({
-      Host : "smtp.gmail.com",
-      Username : "email",
-      Password : "password",
-      To : newsletterEmail,
-      From : "email",
-      Subject : "This is the subject",
-      Body : "Fill body" 
-    }).then(
-      message => alert("Sent")
-    );
+    if (validateEmail(newsletterEmail)) {
+      Email.send({
+        Host : "smtp.gmail.com",
+        Username : "email",
+        Password : "password",
+        To : newsletterEmail,
+        From : "email",
+        Subject : "This is the subject",
+        Body : "Fill body"
+      }).then(
+        message => alert("Sent")
+      );
+    }
+    else {
+      alert("Your email is invalid")
+    }
   });
+
+
+  function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
 });
